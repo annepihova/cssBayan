@@ -1,0 +1,48 @@
+*,
+::before,
+::after{
+    box-sizing: border-box;
+}
+
+body{
+    padding: 0;
+}
+
+.wrapper{
+    margin: 0 auto;
+    display: flex;
+}
+
+
+
+/* Аккардеон */
+.accordion{
+
+}
+
+.accordion-item{
+    margin-top: 20%;
+}
+
+.accordion-item__input{
+    opacity: 0;
+}
+
+.accordion-item__trigger{
+    display: block;
+    padding: 0.3em;
+    border: 1px solid black;
+}
+
+.accordion-item__content{
+    padding: 0.3em;
+    border: 1px solid black;
+    border-top: 0;
+    display: none;
+}
+
+.accordion-item__input:checked ~ .accordion-item__trigger{}
+
+.accordion-item__input:checked ~ .accordion-item__content{
+    display: block;
+}
