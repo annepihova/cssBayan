@@ -49,11 +49,21 @@ body{
     max-height: 0;
 }
 
+.close{
+    background-repeat: no-repeat;
+    background-position: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s all;
+}
+
 .accordion-item__trigger{
-    display: block;
+    display: flex;
+    justify-content: space-between;
     padding: 0.3em;
     cursor: pointer;
-    transition: 0.5s all;
+    transition: 1s all;
+
 }
 
 .accordion-item__content{
@@ -71,10 +81,22 @@ body{
     color: aliceblue;
 }
 
+.accordion-item__input:checked ~ .close{
+    background-image: url('./assets/Vector_close.svg');
+}
+
+.accordion:hover .close {
+    background-image: url('./assets/Vector.svg');
+    visibility: visible;
+    opacity: 1;
+    width: 1em;
+}
+
 .accordion-item__input:checked ~ .accordion-item__content{
     visibility: visible;
     opacity: 1;
     max-height: 100vh;
+    margin-bottom: 1.5em;
 }
 
 .accordion-item__input:hover ~ .accordion-item__content{
@@ -82,6 +104,7 @@ body{
     opacity: 1;
     max-height: 110vh;
     cursor: pointer;
+    margin-bottom: 1.5em;
 }
 
 .accordion-item__content:hover{
@@ -89,4 +112,18 @@ body{
     opacity: 1;
     max-height: 110vh;
     cursor: pointer;
+    margin-bottom: 1.5em;
+}
+
+.accordion:hover h3{
+    color: aliceblue;
+}
+
+.accordion:hover .close{
+    visibility: visible;
+    opacity: 1;
+}
+
+.mem{
+    height: 15rem;
 }
