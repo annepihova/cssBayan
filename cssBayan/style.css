@@ -54,6 +54,7 @@ h3{
 }
 
 .close{
+     background-image: url('./assets/Vector.svg');
     background-repeat: no-repeat;
     background-position: center;
     visibility: hidden;
@@ -80,13 +81,8 @@ h3{
     transition: 1s all;
 }
 
-
 .accordion-item__input:checked ~ .accordion-item__trigger{
     color: aliceblue;
-}
-
-.accordion-item__input:checked ~ .close{
-    background-image: url('./assets/Vector_close.svg');
 }
 
 .accordion-item__input:checked ~ .accordion-item__content{
@@ -100,9 +96,6 @@ h3{
     height: 17vw;
 }
 
-/* @media (max-width: 2000px){
-
-} */
 
 @media (hover: hover) {
 
@@ -113,7 +106,7 @@ h3{
         cursor: pointer;
         margin-bottom: 1.5em;
     }
-    
+
     .accordion-item__content:hover{
         visibility: visible;
         opacity: 1;
@@ -127,12 +120,7 @@ h3{
     }
     
     .accordion:hover .close{
-        visibility: visible;
-        opacity: 1;
-    }
-
-    .accordion:hover .close {
-        background-image: url('./assets/Vector.svg');
+        transform: rotate(0deg);
         visibility: visible;
         opacity: 1;
         width: 1em;
