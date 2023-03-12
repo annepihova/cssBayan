@@ -24,7 +24,7 @@ body{
     margin-bottom: 0.5em;
     display: flex;
     justify-content: flex-start;
-    font-size: 2.3em;
+    font-size: 2.5vw;
 }
 
 
@@ -35,6 +35,10 @@ body{
  justify-content: center;
  flex-direction: column;
  margin-top: 0;
+}
+
+h3{
+    font-size: 1.5vw;
 }
 
 .accordion-item{
@@ -85,13 +89,6 @@ body{
     background-image: url('./assets/Vector_close.svg');
 }
 
-.accordion:hover .close {
-    background-image: url('./assets/Vector.svg');
-    visibility: visible;
-    opacity: 1;
-    width: 1em;
-}
-
 .accordion-item__input:checked ~ .accordion-item__content{
     visibility: visible;
     opacity: 1;
@@ -99,31 +96,45 @@ body{
     margin-bottom: 1.5em;
 }
 
-.accordion-item__input:hover ~ .accordion-item__content{
-    visibility: visible;
-    opacity: 1;
-    max-height: 110vh;
-    cursor: pointer;
-    margin-bottom: 1.5em;
-}
-
-.accordion-item__content:hover{
-    visibility: visible;
-    opacity: 1;
-    max-height: 110vh;
-    cursor: pointer;
-    margin-bottom: 1.5em;
-}
-
-.accordion:hover h3{
-    color: aliceblue;
-}
-
-.accordion:hover .close{
-    visibility: visible;
-    opacity: 1;
-}
-
 .mem{
-    height: 15rem;
+    height: 17vw;
+}
+
+/* @media (max-width: 2000px){
+
+} */
+
+@media (hover: hover) {
+
+    .accordion-item__input:hover ~ .accordion-item__content{
+        visibility: visible;
+        opacity: 1;
+        max-height: 110vh;
+        cursor: pointer;
+        margin-bottom: 1.5em;
+    }
+    
+    .accordion-item__content:hover{
+        visibility: visible;
+        opacity: 1;
+        max-height: 110vh;
+        cursor: pointer;
+        margin-bottom: 1.5em;
+    }
+    
+    .accordion:hover h3{
+        color: aliceblue;
+    }
+    
+    .accordion:hover .close{
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .accordion:hover .close {
+        background-image: url('./assets/Vector.svg');
+        visibility: visible;
+        opacity: 1;
+        width: 1em;
+    }
 }
